@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700|Roboto:300,400');
+
+
+
+
+
+
+
+
+
+
+
+/* 固定 cv 的長度是 800 px, 不因為加 border 而改變 Webkit:safari, moz:firefox*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'oxygen', sans-serif;
+    color: #333333;
+}
+
+
+
+
+
+
+
+
+
+
+/* 把邊框去掉 及 最底部背景顏色 */
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-color: #383C47;
+}
+
+html {
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+/* note css pesudo element (底部的粉紅色框框) */
+
+html:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 130px;
+    background-color: #c889cb;
+    bottom: 0;
+    left: 0;
+}
+
+.cv {
+    position: relative;
+    width: 800px;
+    height: 1250px;
+    background-color: antiquewhite;
+    /* margin 上下 200, 左右置中 */
+    margin: 200px auto;
+    z-index: 5;
+    /* 陰影設定(可同時設定多層陰影) */
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+/* 把內文從米色框框再往內移一點 */
+
+header,
+.intro,
+.experience-list,
+footer {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+
+
+
+
+/* 設定 intro, experience, contact 字型 */
+
+.section-title {
+    font-family: 'roboto', sans-serif;
+    font-weight: 100px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+/* note header */
+
+header {
+    background-color: #ddd4d4;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+}
+
+.name {
+    font-size: 50px;
+    letter-spacing: 4px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.current-job-title {
+    margin: 0;
+}
+
+
+
+
+
+/* note experience */
+
+.experience {
+    border-bottom: 1px solid grey
+}
+
+
+
+
+/* 把 footer 跟最後一個經歷之間的底線拿掉
+last-child (最後一個物件) */
+
+.experience:last-child {
+    border-bottom: none;
+}
+
+
+
+/* note footer */
+
+footer {
+    background-color: #384739;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+
+
+/* footer後"空格"表示 footer 裡面的東西 */
+
+footer * {
+    color: white;
+}
